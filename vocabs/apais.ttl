@@ -1,6 +1,33 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX aarr: <https://data.idnau.org/pid/vocab/aarr/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX informit: <https://informit.org>
+PREFIX nla: <https://linked.data.gov.au/org/nla>
+PREIFX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX ror: <https://ror.org/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ror:04ttjf776 a schema:Organization ;
+schema:name "RMIT University"@en ;
+schema:url "https://www.rmit.edu.au/"^^xsd:anyURI
+.
+
+informit: a schema:Organization ;
+schema:name "Informit"@en ;
+schema:url "https://informit.org"^^xsd:anyURI ;
+
+nla: 
+a schema:Organization ;
+schema:name "National Library of Australia"@en ;
+schema:url "https://informit.org"^^xsd:anyURI ;
+  dcat:qualifiedRelation [
+        a dcat:Relationship ;
+         dcat:hadRole aarr:partOf ;
+    sdo:agent <https://linked.data.gov.au/org/au> ]
 
 <https://editor.vocabs.ands.org.au/apais/00af96c2-effc-42b9-82ee-dac1cca8d148> a skos:Concept ;
     dcterms:contributor <http://editor.vocabs.ands.org.au/user/Swinburne_Kneebone.Les_Admin> ;
@@ -13245,9 +13272,12 @@
 
 <https://editor.vocabs.ands.org.au/apais/8b8df707-52d8-4321-8804-f976fd81c100> a skos:ConceptScheme ;
     dcterms:created "2018-08-20T05:25:17+00:00"^^xsd:dateTime ;
-    dcterms:creator <http://editor.vocabs.ands.org.au/user/Swinburne_Kneebone.Les_Admin> ;
+    dcterms:creator nla: ;
+    dcterms:contributor <https://orcid.org/0000-0001-5640-3202> ;
     dcterms:modified "2019-08-21T10:42:42.270000+00:00"^^xsd:dateTime ;
-    dcterms:title "apais"@en ;
+    dcterms:title "Australian Public Affairs Information Service"@en ;
+    skos:prefLabel "Australian Public Affairs Information Service"@en ;
+    schema:alternative "APAIS"@en ;
     skos:hasTopConcept <https://editor.vocabs.ands.org.au/apais/00ba1564-ce49-4172-9e21-d0848dc2d160>,
         <https://editor.vocabs.ands.org.au/apais/02b0f0f7-1443-47f4-8b3d-ecf6917e6755>,
         <https://editor.vocabs.ands.org.au/apais/0440f342-7e07-43bd-b6e4-8463d6f7ae3a>,
