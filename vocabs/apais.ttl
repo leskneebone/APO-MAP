@@ -17,6 +17,7 @@ informit: a schema:Organization ;
             dcat:hadRole aarr:partOf ;
             schema:agent ror:04ttjf776 ] ;
     schema:name "Informit"@en ;
+    schema:identifier "61006067349"^^id:ausbn ;
     schema:url "https://informit.org"^^xsd:anyURI .
 
 nla: a schema:Organization ;
